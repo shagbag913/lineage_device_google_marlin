@@ -638,3 +638,9 @@ PRODUCT_PACKAGES += \
 # Tethering
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
+
+# IMS
+PRODUCT_PACKAGES += \
+    com.android.ims.rcsmanager \
+    RcsService \
+    PresencePolling
