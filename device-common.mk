@@ -770,6 +770,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.egl=adreno
 
+# Trust HAL
+PRODUCT_PACKAGES += \
+    vendor.lineage.trust@1.0-service
+
 # Google apps
 $(call inherit-product-if-exists, vendor/gapps/gapps.mk)
 
