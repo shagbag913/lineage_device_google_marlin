@@ -20,3 +20,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="marlin-user 9 PQ3A.190705.001 5565753 release-keys"
 
 BUILD_FINGERPRINT := google/marlin/marlin:9/PQ3A.190705.001/5565753:user/release-keys
+
+$(call inherit-product-if-exists, vendor/google/marlin/marlin-vendor.mk)
