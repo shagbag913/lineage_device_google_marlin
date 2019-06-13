@@ -677,6 +677,8 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     bufferhubd \
     performanced \
+    com.google.vr.platform \
+    com.google.vr.platform.xml \
     virtual_touchpad \
     vr_hwc
 
