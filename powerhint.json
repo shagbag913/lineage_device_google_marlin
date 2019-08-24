@@ -7,6 +7,7 @@
         "1593600",
         "1286400",
         "1209600",
+        "1132800",
         "1056000"
       ],
       "DefaultIndex": 0,
@@ -29,6 +30,7 @@
       "Path": "/sys/devices/system/cpu/cpu2/cpufreq/scaling_max_freq",
       "Values": [
         "2150400",
+        "1900800",
         "1363200",
         "1132800",
         "1056000"
@@ -134,6 +136,18 @@
     }
   ],
   "Actions": [
+    {
+      "PowerHint": "VIDEO_ENCODE",
+      "Node": "CPUBigClusterMaxFreq",
+      "Duration": 0,
+      "Value": "1900800"
+    },
+    {
+      "PowerHint": "VIDEO_ENCODE",
+      "Node": "CPULittleClusterMaxFreq",
+      "Duration": 0,
+      "Value": "1132800"
+    },
     {
       "PowerHint": "SUSTAINED_PERFORMANCE",
       "Node": "CPUBigClusterMaxFreq",
