@@ -24,6 +24,11 @@ HELPER=$LINEAGE_ROOT/vendor/lineage/build/tools/extract_utils.sh
 DEVICE=$1
 [ -n "$2" ] && SRC=$2 || SRC=adb
 
+# patchelf is required to remove false dependency on camera library
+if ! command -v patchelf &>/dev/null; then
+    echo "patchelf not found in PATH, exiting"
+    exit 1
+fi
 if [ ! -f $HELPER ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -50,5 +55,9 @@ extract $MY_DIR/$DEVICE/device-proprietary-files-vendor.txt $SRC
 MVS='<disabled-until-used-preinstalled-carrier-app package="com.verizon.mips.services" />'
 sed -i 's|'"$MVS"'|<!--'"$MVS"'-->|' \
     $LINEAGE_ROOT/vendor/$VENDOR/$DEVICE/proprietary/etc/sysconfig/nexus.xml
+
+# Remove false dependency from camera library
+patchelf --remove-needed libqti-perfd-client.so \
+    $LINEAGE_ROOT/vendor/$VENDOR/$DEVICE/proprietary/vendor/lib/libmmcamera_imglib.so
 
 $MY_DIR/setup-makefiles.sh $DEVICE
