@@ -46,7 +46,7 @@
         "1363200",
         "1209600",
         "1132800",
-        "691200"
+        "614400"
       ],
       "ResetOnInit": true
     },
@@ -124,15 +124,6 @@
         "762"
       ],
       "ResetOnInit": true
-    },
-    {
-      "Name": "PMQoSCpuDmaLatency",
-      "Path": "/dev/cpu_dma_latency",
-      "Values": [
-        "44",
-        "100"
-      ],
-      "HoldFd": true
     }
   ],
   "Actions": [
@@ -312,12 +303,6 @@
     },
     {
       "PowerHint": "LAUNCH",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 2000,
-      "Value": "44"
-    },
-    {
-      "PowerHint": "LAUNCH",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 2000,
       "Value": "0"
@@ -345,18 +330,6 @@
       "Node": "CPUBigClusterMinFreq",
       "Duration": 2000,
       "Value": "1209600"
-    },
-    {
-      "PowerHint": "AUDIO_STREAMING",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 2000,
-      "Value": "44"
-    },
-    {
-      "PowerHint": "AUDIO_LOW_LATENCY",
-      "Node": "PMQoSCpuDmaLatency",
-      "Duration": 0,
-      "Value": "44"
     }
   ]
 }
