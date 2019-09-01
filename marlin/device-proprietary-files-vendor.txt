@@ -406,7 +406,6 @@ vendor/lib/egl/libGLESv1_CM_adreno.so
 vendor/lib/egl/libGLESv2_adreno.so
 vendor/lib/egl/libq3dtools_adreno.so
 vendor/lib/egl/libq3dtools_esx.so
-vendor/lib/hw/audio.primary.msm8996.so
 vendor/lib/hw/flp.default.so
 vendor/lib/hw/gatekeeper.msm8996.so
 vendor/lib/hw/gps.default.so
