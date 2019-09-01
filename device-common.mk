@@ -650,10 +650,6 @@ PRODUCT_PACKAGES += \
     RcsService \
     PresencePolling
 
-# Google Assistant
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    ro.opa.eligible_device=true
-
 # Camera
 PRODUCT_PACKAGES += \
     libmm-qcamera
