@@ -34,6 +34,9 @@ DEVICE_PACKAGE_OVERLAYS += device/google/marlin/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS := *
 
+# Don't dexpreopt prebuilts to save system space
+DONT_DEXPREOPT_PREBUILTS := true
+
 # Input device files
 PRODUCT_COPY_FILES += \
     device/google/marlin/gpio-keys.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/gpio-keys.kl \
